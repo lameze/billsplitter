@@ -1,23 +1,13 @@
 <?php
-require_once ('lib/parsecsv-for-php/parsecsv.lib.php');
+require_once (__DIR__ . '/lib/parsecsv-for-php/parsecsv.lib.php');
 error_reporting(E_ALL);
 $csv = new parseCSV('Data.csv');
-//echo "<pre>";
-//print_r($csv->data);
+
 echo "<table border='1'>";
 echo '<form action="process.php" method="POST">';
 echo '<input type="hidden" name="simey" value="test">';
 $transactionss = $csv->data;
 foreach ($transactionss as $id => $transactions) {
-
-//    [0] => Array
-//    (
-//        [Bank Account] => 733072717607
-//            [Date] => 21/03/16
-//            [Narrative] => DEBIT CARD PURCHASE TARGET 5057 EAST VICTORI AUS
-//            [Debit Amount] => 20.00
-//            [Credit Amount] =>
-//            [Categories] => PAYMENT
     $expdate = $transactions['Date'];
     $expdesc = $transactions['Narrative'];
     $debit = $transactions['Debit Amount'];
