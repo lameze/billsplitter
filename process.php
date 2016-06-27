@@ -24,13 +24,14 @@ foreach ($post['transactions'] as $i => $v) {
         echo "<tr>";
         echo "<td>".$v['date']."</td>";
         echo "<td>".$v['desc']."</td>";
+        echo "<td>".$v['share']."%</td>";
         echo "<td>".$v['debit']."</td>";
         echo "<td>".$valor_baby."</td>";
         echo "</tr>";
     }
 }
 echo "<tr>";
-echo "<td colspan='2'>Total</td>";
+echo "<td colspan='3'>Total</td>";
 echo "<td>".$total_mimey."</td>";
 echo "<td>".$total_baby."</td>";
 echo "</tr>";

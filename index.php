@@ -49,8 +49,8 @@ function print_share_select($id) {
     $select = "<select name='$name'>";
     $select .= "<option value='100'>100%</option>";
     $select .= "<option value='50' selected>50%</option>";
-    $select .= "<option value='60'>40%</option>";
-    $select .= "<option value='70'>30%</option>";
+    $select .= "<option value='40'>40%</option>";
+    $select .= "<option value='30'>30%</option>";
     $select .= "</select>";
 
     return $select;
